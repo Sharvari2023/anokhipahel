@@ -15,12 +15,26 @@ export const getSchedules = async (req, res) => {
 //create schedule
 export const createSchedule = async (req, res) => {
     try {
-        const { className, subject, teacherid, day, time } = req.body;
-        const teacher = await Teacher.findById(teacherid);
-        if (!teacher) return res.status(404).json({ message: "Teacher not found" });
+        console.log("request recieved", req.body);
+        const { className, subject, teacherId, day, time } = req.body;
+        const teacher = await Teacher.findById(teacherId);
+        if (!teacher) {
+            console.error("Teacher not found:", teacherId);
+            return res.status(404).json({ message: "Teacher not found" });
+        }
+        console.log(teacher);
 
-        const schedule = new Schedule({ className, subject, teacher: teacherid, day, time });
+        console.log("✅ Creating schedule...");
+        const schedule = new Schedule({
+            className,
+            subject,
+            teacher: teacherId,
+            day,
+            time
+        });
+        console.log("🔄 Attempting to save schedule...");
         await schedule.save();
+        console.log("✅ Schedule saved successfully:", schedule);
 
         teacher.schedules.push(schedule._id);
         await teacher.save();

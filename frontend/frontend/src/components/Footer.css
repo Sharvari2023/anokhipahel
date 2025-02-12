@@ -1,0 +1,101 @@
+/* Ensure full height for body */
+html,
+body {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Root container should take full height */
+#root {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+}
+
+/* Make content take up remaining space */
+#root>*:not(.footer-container) {
+    flex: 1 !important;
+}
+
+/* Fixed footer at the bottom */
+.footer-container {
+    border-top: 6px solid #83a2c1 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background-color: #0f4b63 !important;
+    /* Light Blue */
+    color: white !important;
+    padding: 24px 0 !important;
+    text-align: center !important;
+    z-index: 1000 !important;
+
+}
+
+/* Footer content layout */
+.footer-content {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 32px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+}
+
+.footer-column h3 {
+    font-weight: bold !important;
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+}
+
+.footer-column ul {
+    list-style-type: none !important;
+    padding: 0 !important;
+}
+
+.footer-column ul li a {
+    text-decoration: none !important;
+    color: whitesmoke !important;
+    transition: color 0.3s ease-in-out !important;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline !important;
+    color: #cfd7dd !important;
+    /* Dark Blue */
+}
+
+.footer-contact p {
+    margin: 5px 0 !important;
+}
+
+.footer-bottom {
+    text-align: center !important;
+    border-top: 2px solid #b6babd !important;
+    /* Change to your desired color */
+    padding-top: 16px !important;
+    margin-top: 16px !important;
+    font-size: 14px !important;
+}
+
+
+.footer-icons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+}
+
+.footer-icons a {
+    font-size: 20px !important;
+    color: black !important;
+    transition: color 0.3s ease-in-out !important;
+}
+
+.footer-icons a:hover {
+    color: #4B86B4 !important;
+    /* Blue Hover */
+}

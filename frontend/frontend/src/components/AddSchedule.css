@@ -1,0 +1,60 @@
+:root {
+    --primary: #2A4D69 !important;
+    --secondary: #4B86B4 !important;
+    --accent: #63ACE5 !important;
+    --background: #F2F2F2 !important;
+}
+
+/* Container */
+.schedule-container {
+    background-color: var(--background) !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 20px auto !important;
+}
+
+/* Title */
+.schedule-title {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    color: var(--primary) !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+}
+
+/* Form */
+.schedule-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+/* Inputs */
+.schedule-input,
+.schedule-select {
+    padding: 10px !important;
+    border: 2px solid var(--secondary) !important;
+    border-radius: 5px !important;
+    font-size: 1rem !important;
+    outline: none !important;
+    background-color: white !important;
+}
+
+/* Button */
+.schedule-button {
+    background-color: var(--secondary) !important;
+    color: white !important;
+    font-size: 1rem !important;
+    padding: 10px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease !important;
+}
+
+.schedule-button:hover {
+    background-color: var(--accent) !important;
+}

@@ -1,0 +1,48 @@
+/* Navbar Styling */
+.navbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  background-color: #0f4b63 !important;
+  /* Darker Blue */
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Logo & Title Container */
+.logo-container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  /* Space between image and title */
+}
+
+/* Image Styling */
+.logo {
+  height: 40px !important;
+  width: auto !important;
+}
+
+/* Title */
+.title {
+  font-size: 1.25rem !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .logo {
+    height: 35px !important;
+  }
+
+  .title {
+    font-size: 1rem !important;
+  }
+}
